@@ -8,7 +8,7 @@ winner = "" # The winner of the election based on popular vote
 max_votes = 0 # The maximum number of votes among the candidates
 
 # Open the csv file
-with open("PyPoll/Resources/election_data.csv") as csvfile:
+with open("Resources/election_data.csv") as csvfile:
     # Create a csv reader object
     csvreader = csv.reader(csvfile, delimiter=",")
 

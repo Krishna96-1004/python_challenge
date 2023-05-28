@@ -1,6 +1,6 @@
 import csv
 # Open the CSV file using csv.reader()
-with open('PyBank/Resources/budget_data.csv') as file:
+with open('Resources/budget_data.csv') as file:
     reader = csv.reader(file)
     # Skip the header row
     next(reader)
@@ -9,6 +9,12 @@ with open('PyBank/Resources/budget_data.csv') as file:
 
 # Calculate the total months
 total_months = len(data)
+
+# Calculate the net total
+net_total = sum(row[1] for row in data)
+
+print(data)
+
 # Create an empty list to store the changes in "Profit/Losses"
 changes = []
 # Loop through the data and calculate the changes in "Profit/Losses" between each cell over the entire period
